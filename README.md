@@ -1,10 +1,10 @@
-<h1>test-assignment-maxinum<h1>
+<h1>test-assignment-maxinum</h1>
 <p>My test assignment for the company MC. </p>
 <p>Напишите простую форму ввода расходов. Таблица transactions: id, dateTime, sum, category, comment.
 Форма: Дата (календарь), Сумма, Категория (из списка, любые пару-тройку вариантов можете накидать), Комментарий
 React, Express, Nest, SQL.</p>
 
-<h2>Install<h2>
+<h2>Install</h2>
 
 <p>2. Install PostgreSQL. Create table transactions:</p>
 <code>
@@ -17,7 +17,7 @@ React, Express, Nest, SQL.</p>
 );
 </code>
 
-<h2>Stack<h2>
+<h2>Stack</h2>
 <p>Client: react - js, tailwindcss axios</p>
 <p>Server: express, cors, axios, pg, dotenv </p>
 <p>DB: postgressql</p>
