@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import UserForm from "./UserForm";
+import UserForm from "./TransactionForm";
+import TransactionForm from "./TransactionForm";
 
 function App() {
   const [showForm, setShowForm] = useState(false);
@@ -12,7 +13,7 @@ function App() {
       >
         {showForm ? "Hide Form" : "Show Form"}
       </button>
-      {showForm && <UserForm />}
+      {showForm && <TransactionForm />}
     </div>
   );
 }

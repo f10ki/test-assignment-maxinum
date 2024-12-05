@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 
 const TransactionForm = () => {
   const [formData, setFormData] = useState({
@@ -18,9 +19,18 @@ const TransactionForm = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Transaction submitted:", formData);
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/transactions",
+        formData
+      );
+      console.log("Transaction saved:", response.data);
+      // Optional: Reset form or show success message
+    } catch (error) {
+      console.error("Error saving transaction:", error);
+    }
   };
 
   return (
