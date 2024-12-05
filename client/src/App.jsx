@@ -1,12 +1,19 @@
-import { useState } from "react";
+import React, { useState } from "react";
+import UserForm from "./UserForm";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [showForm, setShowForm] = useState(false);
 
   return (
-    <>
-      <p>Lets fuck</p>
-    </>
+    <div>
+      <button
+        onClick={() => setShowForm(!showForm)}
+        className="bg-green-500 text-white px-4 py-2 rounded"
+      >
+        {showForm ? "Hide Form" : "Show Form"}
+      </button>
+      {showForm && <UserForm />}
+    </div>
   );
 }
 
